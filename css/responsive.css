@@ -1,5 +1,17 @@
 /* Medium Layout: 1367px. */
 
+@media only screen and (min-width: 1920px) {
+    .states {
+        background-size:cover;
+    }
+    .header {
+        background-size: cover;
+        background-position: center center;
+        background-image:url(../img/header_max.jpg);
+        overflow:hidden;
+    }
+}
+
 @media only screen and (min-width: 1200px) and (max-width: 1367px) {
 
     header .header-container {
