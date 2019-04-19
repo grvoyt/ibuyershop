@@ -140,7 +140,24 @@
         margin-bottom: 8px;
     }
 
+    .states_wrap {
+        padding:20px 0;
+    }
 
+    header .menu ul li:last-child {
+        margin-right: 10px;
+    }
+
+    .buy_map_list {
+        width: 400px;
+        -ms-flex: 0 0 400px;
+        flex: 0 0 400px;
+    }
+
+    .buy_map_list .buy_map_list--item,
+    .card_history_table {
+        width: 100%;
+    }
 
 }
 
@@ -273,17 +290,101 @@
 
 
 
+    .states_wrap {
+        padding:80px 0;
+    }
+
+    .callback-input-area {
+        justify-content: space-around;
+    }
+
+    .callback-input-area .calback-input-box {
+        flex:0 0 30%;
+        max-width: 30%;
+    }
+
+    .about2-info .title {
+        font-size: 16px;
+    }
+
+    .step1 {
+        padding-top: 20px;
+    }
+
+    .metrik h4 {
+        font-size: 50px;
+    }
+
+    .metrik p {
+        font-size: 18px;
+    }
+
+    .pricing_tables_item--left {
+        flex: 0 0 60%;
+        max-width: 60%;
+    }
+
+    .pricing_tables_item--right {
+        flex: 0 0 40%;
+        max-width: 40%;
+    }
+
+    .investors_header_fl h1 {
+        text-align: center;
+    }
+
+    .page-title.title-left {
+        text-align: center;
+    }
 }
 
+@media only screen and (max-width: 991px) {
+    #mobile_menu_active {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
-/* Mobile Layout: 320px. */
+    .header-2 .logo {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
 
-@media only screen and (max-width: 767px) {}
+    a.logo_phone {
+        display: block;
+    }
+
+    a.logo_phone {
+        color: #223c55;
+        font-family: "Lato", sans-serif;
+        font-size: 18px;
+        letter-spacing: 0;
+        line-height: 41px;
+    }
+
+    a.logo_phone:hover {
+        color:#0099ff
+    }
+
+    a.logo_phone span:before {
+        font-size: 16px;
+        color:inherit;
+    }
+
+    .header {
+        padding: 120px 0 300px;
+    }
+
+    header .menu ul li {
+        margin: 0;
+    }
+}
 
 
 /* Wide Mobile Layout: 480px. */
 
-@media only screen and (min-width: 481px) and (max-width: 767px) {
+@media only screen and (min-width: 576px) and (max-width: 767px) {
 
     /* home-one */
     header .header-container {
@@ -419,6 +520,330 @@
 
 }
 
+@media only screen and (max-width: 767px) {
+    .card_history_table {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+
+    #mobile_menu_active {
+        display: none;
+    }
+
+    .mobile_menu {
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #fff;
+        z-index: 2000;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: all .3s ease;
+        -moz-transition: all .3s ease;
+        -ms-transition: all .3s ease;
+        -o-transition: all .3s ease;
+        transition: all .3s ease;
+        visibility: hidden;
+        opacity: 0;
+        padding:20px;
+        padding-top: 100px;
+    }
+
+    .mobile_menu_wrapper {
+        display: flex;
+        flex-flow:row wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .mobile_menu_wrapper a.logo-link,
+    .mobile_menu_wrapper a.logo_phone {
+        width: 100%;
+        text-align: center;
+    }
+
+    .mobile_menu_wrapper a.logo_phone {
+        font-size: 24px;
+    }
+
+    .mobile_menu_wrapper .home1-link {
+
+    }
+
+    .mobile_menu_wrapper a.menu_list_a {
+        padding:10px 20px;
+        font-size: 30px;
+    }
+
+    .mobile_menu a {
+        height: auto;
+        line-height: 1.2;
+        margin-bottom: 20px;
+    }
+
+    .mobile_menu ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    .mobile_menu ul li {
+        line-height: normal;
+    }
+
+    .mobile_menu a.logo-link {
+        font-size: 40px;
+    }
+
+    .mobile_menu.show {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .mobile_button {
+        position: fixed;
+        top: 8px;
+        left: 10px;
+        z-index: 9999;
+        outline: none;
+        padding: 9px 10px;
+        border:none;
+        border-radius:5px;
+        background-color: #f9f9f9;
+        cursor: pointer;
+    }
+
+    .mobile_button span {
+        display: block;
+        width: 22px;
+        height: 2px;
+        border-radius: 1px;
+        margin-top: 4px;
+        background-color: #0099ff;
+        -webkit-transition: transform 0.3s, opacity 0.3s;
+        -moz-transition: transform 0.3s, opacity 0.3s;
+        -ms-transition: transform 0.3s, opacity 0.3s;
+        -o-transition: transform 0.3s, opacity 0.3s;
+        transition: transform 0.3s, opacity 0.3s;
+
+    }
+    .mobile_button span:nth-child(1) {
+        margin-top: 0;
+    }
+
+
+    .mobile_button.show span:nth-child(1) {
+        -webkit-transform: translateY(6px) rotate(45deg);
+        -moz-transform: translateY(6px) rotate(45deg);
+        -ms-transform: translateY(6px) rotate(45deg);
+        -o-transform: translateY(6px) rotate(45deg);
+        transform: translateY(6px) rotate(45deg);
+    }
+
+    .mobile_button.show span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .mobile_button.show span:nth-child(3) {
+        -webkit-transform: translateY(-6px) rotate(-45deg);
+        -moz-transform: translateY(-6px) rotate(-45deg);
+        -ms-transform: translateY(-6px) rotate(-45deg);
+        -o-transform: translateY(-6px) rotate(-45deg);
+        transform: translateY(-6px) rotate(-45deg);
+    }
+
+    .of-hidden {
+        overflow: hidden;
+    }
+
+    .search2-area .search2-full-box {
+        padding:30px 20px;
+    }
+
+    .search2-area .search2-full-box .search2-all-box .search2-input-box.btn-box {
+        flex: 0 0 40%;
+        width: 40%;
+        text-align: right;
+    }
+
+    .search2-area .search2-full-box .search2-all-box .search2-input-box {
+        flex: 0 0 58%;
+        max-width: 58%;
+        margin-right: 0;
+    }
+
+    .search2-area .search2-full-box .search2-all-box {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .search2-area .search2-full-box {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .about2-info {
+        padding-left: 75px;
+        height: auto;
+    }
+
+    .about2__number {
+        width: 60px;
+        height: 60px;
+        font-size: 40px;
+        top: 0;
+        left: 0;
+        -webkit-transform: none;
+        -moz-transform: none;
+        -ms-transform: none;
+        -o-transform: none;
+        transform: none;
+    }
+
+    .about2-info .title {
+        text-align: left;
+        margin: 0;
+    }
+
+    .about2-area-steps-wrap {
+        padding-top: 0;
+    }
+
+    .states_wrap {
+        padding:0px 0;
+    }
+
+    .differense {
+        padding: 80px 0 100px;
+    }
+
+    .differense .section-title {
+        margin-bottom: 80px;
+    }
+
+    .differense_wrap {
+        flex-direction: column;
+    }
+
+    .callback-input-area {
+        flex-direction: column;
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .callback-input-area .calback-input-box,
+    .callback-input-area .cib-submit {
+        flex:0 0 100%;
+        max-width: 100%;
+    }
+
+    .callback-input-area .calback-input-box {
+        margin-bottom: 20px;
+    }
+
+    .callback-main {
+        -webkit-background-size: cover;
+        background-size: cover;
+        padding-top: 80px;
+    }
+
+    .step1 #map {
+        height: 300px;
+    }
+
+    .step2 h1 {
+        text-align: center;
+        font-size: 40px;
+    }
+
+    .step2 .text {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .step2 {
+        padding:100px 0;
+        -webkit-background-size: cover;
+        background-size: cover;
+    }
+
+    .howheader h1,
+    .investors_header_fl h1 {
+        text-align: center;
+    }
+
+    .howsteps .section-title {
+        margin-bottom: 60px;
+    }
+
+    .pricing_tables_item {
+        margin-bottom: 30px;
+    }
+
+    .differense_wrap_item {
+        width: 100%;
+    }
+
+    .metrik h4 {
+        margin-bottom: 0px;
+    }
+
+    .metrik {
+        margin-bottom: 50px;
+    }
+
+    .page-title.title-left,
+    .contact_wrapper {
+        text-align: center;
+    }
+
+    .vendors_area_img {
+        display: none;
+    }
+
+    .office_item .text, .office_item .text a {
+        font-size: 18px;
+    }
+
+    .office_item h4 {
+        font-size: 28px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .card_about_facts_item {
+        width: 50%;
+    }
+    .card_about_facts {
+        margin-bottom: 40px;
+    }
+
+    .card_history_table {
+        overflow-x: scroll;
+    }
+
+    .card_history_table--1 {
+        max-width: 130px;
+        flex:0 0 130px;
+    }
+
+    .card_history_table--2 {
+        max-width: 230px;
+        flex:0 0 230px;
+    }
+    .card-carusel .owl-nav .owl-prev {
+        left: 10px;
+    }
+
+    .card-carusel .owl-nav .owl-next {
+        right: 10px;
+    }
+}
 
 /* Small Mobile Layout: 480px. */
 
@@ -653,8 +1078,125 @@
         padding-top: 20px;
     }
 
+    a.logo-link {
+        font-size: 18px;
+    }
 
+    .header-2 {
+        padding-left: 40px;
+    }
 
+    .header .hero2-content .title {
+        font-size: 30px;
+        line-height: 1.3;
+    }
+
+    .search2-area .search2-full-box .search2-all-box .search2-input-box.btn-box {
+        flex:0 0 100%;
+        max-width: 100%;
+    }
+
+    .search2-area .search2-full-box .search2-all-box .search2-input-box .btn {
+        width: 100%;
+    }
+
+    .how .section-title,
+    .faq .section-title {
+        margin-bottom: 40px;
+    }
+
+    .faq {
+        padding: 80px 0
+    }
+
+    .callback-input-area {
+        width: 100%;
+    }
+
+    .mobile_menu_wrapper a.menu_list_a {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .howheader {
+        background-position:10% center ;
+    }
+
+    .howheader h1,
+    .investors_header_fl h1 {
+        font-size: 36px;
+        line-height: 1.3;
+    }
+
+    .step_description p.text {
+        font-size: 14px;
+    }
+
+    .step_number {
+        flex:0 0 58px;
+        max-width: 58px;
+    }
+
+    .step_number--number {
+        font-size: 36px;
+    }
+
+    .howsteps_wrapper:after {
+        left: 29px;
+        width: 2px;
+    }
+
+    .step {
+        margin-bottom: 30px;
+    }
+
+    .invest_metriks .section-title {
+        margin-bottom: 40px;
+    }
+
+    .metrik h4 {
+        font-size: 36px;
+    }
+
+    .metrik p {
+        font-size: 18px;
+    }
+
+    .invest_metriks {
+        padding:80px 0;
+    }
+
+    .investors_header_fl .btn-style-1 {
+        text-align: center;
+    }
+
+    .invest_posts .single-feature {
+        margin-bottom: 40px;
+    }
+
+    .vendors_ares_tags .tags li {
+        padding:10px 10px;
+    }
+
+    .offices .single-feature {
+        margin-bottom: 40px;
+    }
+
+    .offices .section-title {
+        margin-bottom: 40px;
+    }
+
+    .section-title .title {
+        text-align: left;
+    }
+
+    .office_item h4 {
+        margin-bottom: 15px;
+    }
+
+    .offices {
+        padding-bottom: 20px;
+    }
 }
 
 

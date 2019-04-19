@@ -9,51 +9,34 @@
         $('#preloader').fadeOut('slow', function() { $(this).remove(); });
     });
 
-    /*----------------------------
-     jQuery MeanMenu
-    ------------------------------ */
-    $('nav#dropdown').meanmenu();
+    /* menu */
 
-    /*-----------------
-    meanmenu 
-    -----------------*/
-    $('nav#mobile_menu_active').meanmenu({
-        meanScreenWidth: "991",
-        meanMenuContainer: '.menu',
+    function menuShower() {
+        var elements = $('.menu-item'),
+            elementsArray = [];
+        elements.each(function(id,item) {
+            elementsArray.push(item.outerHTML);
+        });
+
+        var menuElement = $('<div class="mobile_menu_wrapper"></div>').append(elementsArray.join(''));
+        var menuElement = $('<div class="mobile_menu"></div>').append(menuElement);
+        $('body').append(menuElement);
+        $('body').append('<button type="button" class="mobile_button"><span></span><span></span><span></span></button>');
+    }
+
+    $(document).on('click', '.mobile_button', function() {
+        $(this).toggleClass('show');
+        $('.mobile_menu').toggleClass('show', function() {
+            $('html').toggleClass('fixed-width');
+        });
+
     });
-	
-	/*------------------------
-    meanmenu-remove-class
-    ------------------------*/
-    $(window).on('resize', function() {
-        var wWidth = $(this).width();
 
-        if (wWidth < 991) {
-            // removing class
-            $('.drop').addClass('m-d-removed');
-            $('.m-d-removed').removeClass('drop');
-
-            $('.third').addClass('t-h-m-removed');
-            $('.t-h-m-removed').removeClass('third');
-
-            $('.mega-menu').addClass('m-g-removed');
-            $('.m-g-removed').removeClass('mega-menu');
-        } else {
-            // adding class
-            $('.m-d-removed').addClass('drop');
-            $('.drop').removeClass('m-d-removed');
-
-            $('.third').removeClass('t-h-m-removed');
-            $('.t-h-m-removed').addClass('third');
-
-            $('.mega-menu').removeClass('m-g-removed');
-            $('.m-g-removed').addClass('mega-menu');
-        }
-    }).resize();
+    menuShower();
 
     function cardFix(tag) {
         var block = $('.card_info_offer');
-        if(!block.length) return;
+        if(!block.length || $(window).width() < 992) return;
         if(!!tag) window.card_info_offer = block.offset().top;
         var blLeft = block.offset().left;
         var blWidth = block.width();
