@@ -145,6 +145,9 @@ textarea {
   letter-spacing: 1px;
 }
 
+section {
+  padding:80px 0;
+}
 /* 
 Table Of Contents
 =========================
@@ -1733,17 +1736,16 @@ footer {
   border: 0 none;
   text-align: center;
   letter-spacing: 0;
-  padding: 0px 8px;
+  padding: 10px 34px;
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
-  width: 100%;
-  line-height: 40px;
   -webkit-transition: box-shadow .4s;
   -moz-transition: box-shadow .4s;
   -ms-transition: box-shadow .4s;
   -o-transition: box-shadow .4s;
   transition: box-shadow .4s;
+  display: inline-block;
 }
 
 .btn:hover {
@@ -3631,6 +3633,220 @@ form input[type="text"] {
   height: 100%;
 }
 
+.pricing {
+  padding:80px 0;
+  background: url(../img/pricing.jpg) no-repeat center center;
+}
 
+.about {
+  padding:80px 0;
+}
 
+.about, .pricing {
+  background-color: #f7f7f7;
+}
 
+.pricing .section-title,
+.about .section-title {
+  margin-bottom: 0;
+}
+
+.pricing_tables {
+  padding-top: 80px;
+}
+
+.pricing_tables_item {
+  display: flex;
+  flex-flow:column nowrap;
+  padding:20px;
+  border:2px solid #0099ff;
+}
+
+.pricing_tables_item--row {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.pricing_tables_item--left {
+  flex:0 0 70%;
+  max-width: 70%;
+  padding-right: 20px;
+}
+
+.pricing_tables_item--left p {
+  font-size: 18px;
+}
+
+.pricing_tables_item--right {
+  flex:0 0 30%;
+  max-width: 30%;
+  text-align: center;
+  padding:0 10px;
+}
+
+.pricing_tables_item--right p {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.pricing_tables_item--right p.light {
+  font-weight: normal;
+  font-size: 16px;
+}
+
+.pricing_tables_item--full {
+  width: 100%;
+}
+
+.pricing_tables_item--full p {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.page-title {
+  text-align: center;
+}
+
+.page-title.title-left {
+  text-align: left;
+}
+
+.page-title.title-right {
+  text-align: right;
+}
+
+.page-title .title {
+  color: #223c55;
+  font-size: 42px;
+  line-height: 46px;
+  font-weight: 600;
+}
+
+.page-title .text {
+  color: #405e76;
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 300;
+  margin: 22px 0 0;
+}
+
+.vendors {
+  padding:100px 0;
+  background:url(../img/vendors.jpg) no-repeat center top;
+  background-size:cover;
+  color:#fff;
+}
+
+.vendors .page-title .title,
+.vendors .page-title .text {
+  color:#fff;
+}
+
+.vendors .page-title .text {
+  margin-bottom: 20px;
+}
+
+.vendors_area {
+  padding: 80px 0 130px;
+
+}
+
+.vendors_area .section-title {
+  margin-bottom: 60px;
+}
+
+.vendors_area--text .text {
+  color: #405e76;
+  font-size: 20px;
+  line-height: 27px;
+  font-weight: 300;
+  margin-bottom: 50px;
+}
+
+.vendors_area--text h4 {
+  color: #223c55;
+  font-size: 32px;
+  line-height: 46px;
+  font-weight: 600;
+}
+
+.vendors_ares {
+  background-image: -moz-linear-gradient( 0deg, rgb(0,153,255) 0%, rgb(119,216,255) 100%);
+  background-image: -webkit-linear-gradient( 0deg, rgb(0,153,255) 0%, rgb(119,216,255) 100%);
+  background-image: -ms-linear-gradient( 0deg, rgb(0,153,255) 0%, rgb(119,216,255) 100%);
+}
+
+.vendors_ares .section-title {
+  margin-bottom: 60px;
+}
+
+.vendors_ares .section-title .title {
+  color:#fff;
+}
+
+.vendors_ares_tags .tags {
+  padding: 0;
+  list-style: 0;
+  display: flex;
+  flex-flow:row wrap;
+  justify-content: center;
+}
+
+.vendors_ares_tags .tags li {
+  display: inline-block;
+  margin-right: 9px;
+  margin-bottom: 16px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  border-radius: 3px;
+  border: 1px solid #eeeeee;
+  background: transparent;
+  color: #fff;
+  letter-spacing: 0;
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 15px;
+  padding: 15px 30px;
+}
+
+.vendors_contact .section-title {
+  margin-bottom: 0;
+}
+
+.vendors_contact .section-title .title {
+  margin-bottom: 40px;
+}
+
+.vendors_contact .section-title .text {
+  margin-bottom: 30px;
+}
+
+.section-title .section-link {
+  font-size: 24px;
+  color:#878787;
+  position: relative;
+
+}
+
+.section-title .section-link:after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  right: 0;
+  width: 0%;
+  height: 2px;
+  background-color:#0099ff;
+  -webkit-transition: width .4s;
+  -moz-transition: width .4s;
+  -ms-transition: width .4s;
+  -o-transition: width .4s;
+  transition: width .4s;
+}
+
+.section-title .section-link:hover:after {
+  width: 100%;
+}
