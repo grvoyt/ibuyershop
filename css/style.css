@@ -3850,3 +3850,215 @@ form input[type="text"] {
 .section-title .section-link:hover:after {
   width: 100%;
 }
+
+.card_main {
+  padding: 40px 0 0px;
+  background-color: #f7f7f7;
+}
+
+.card-carusel {
+  display: block;
+  width: 100%;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.card-carusel .owl-nav .owl-prev,
+.card-carusel .owl-nav .owl-next {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  color:#fff;
+  font-size: 30px;
+
+}
+
+.card-carusel .owl-nav .owl-prev i,
+.card-carusel .owl-nav .owl-next i {
+  text-shadow: 0px 0px 5px rgba(0,0,0,.7);
+}
+
+.card-carusel .owl-nav .owl-prev {
+  left: 40px;
+}
+
+.card-carusel .owl-nav .owl-next {
+  right: 40px;
+}
+
+.card-carusel-item {
+  margin:0px;
+}
+
+.card-carusel-img {
+  display: block;
+  width: 100%;
+}
+
+.card_info {
+  position: relative;
+}
+
+.card_info h2 {
+  color: #223c55;
+  margin-bottom: 20px;
+}
+
+.card_info_option {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.card_info_spec {
+  display: flex;
+}
+
+.card_info_spec__info {
+  width: 50%;
+}
+
+.card_info h3 {
+  color: #223c55;
+  margin-bottom: 5px;
+}
+
+.card_info h3 span {
+  color:#0099ff;
+}
+
+.card_info_offer {
+  padding: 20px 0;
+  top: 50px;
+}
+
+.card_info_offer.fixed {
+  position: fixed;
+}
+
+.card_info_offer--title {
+  text-align: center;
+  color: #223c55;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.card_info_offer .btn {
+  width: 100%;
+}
+
+.card_about {
+  padding:40px 0;
+}
+
+.card_about_wrapper {
+  display: flex;
+  flex-flow:column nowrap;
+}
+
+.card_about_facts {
+  display: flex;
+  flex-flow:row wrap;
+  justify-content: space-between;
+}
+
+.card_about_facts h2 {
+  color: #223c55;
+  font-size: 28px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.card_about_facts_item {
+  width: 30%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.card_about_facts_item i {
+  font-size: 40px;
+  margin-right: 10px;
+}
+
+.card_about_facts_item i:before {
+  font-size: 40px;
+  color: #223c55;
+}
+
+.card_about_facts_item--title {
+  font-weight: bold;
+  font-size: 19px;
+  color: #223c55;
+}
+
+.card_map #map {
+  width: 100%;
+  height: 300px;
+}
+
+.card_about--title {
+  color: #223c55;
+  font-size: 28px;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.card_about--descr {
+  color: #878787;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.card_history_table {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  border:1px solid rgba(0,0,0,0.3);
+  padding:10px;
+}
+
+.card_history_table--row {
+  display: flex;
+  margin-bottom: 10px;
+
+}
+
+.card_history_table--row.caption {
+  font-weight: bold;
+  color: #223c55;
+  font-size: 19px;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 15px;
+  border-bottom: 1px solid rgba(0,0,0,0.3);
+}
+
+.card_history_table--1 {
+  max-width: 20%;
+  flex:0 0 20%;
+}
+
+.card_history_table--2 {
+  width: 100%;
+}
+
+.card_history_table--3 {
+  max-width: 20%;
+  flex:0 0 20%;
+}
+
+.card_history {
+  margin-bottom: 40px;
+}
+
+
+
+
+
+
+
+
+

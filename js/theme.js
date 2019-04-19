@@ -51,12 +51,25 @@
         }
     }).resize();
 
+    function cardFix(tag) {
+        var block = $('.card_info_offer');
+        if(!block.length) return;
+        if(!!tag) window.card_info_offer = block.offset().top;
+        var blLeft = block.offset().left;
+        var blWidth = block.width();
+        var topWindow = $(window).scrollTop() + 100;
+        block.css('width',blWidth).css('left', blLeft);
+        block[ (topWindow > window.card_info_offer) ? 'addClass' : 'removeClass' ]('fixed');
+    }
+    cardFix(true);
+
     /*-----------------
     sticky
     -----------------*/
     $(window).on('scroll', function() {
         if($('#buy').length) return;
         $('header')[($(window).scrollTop() > 85) ? 'addClass' : 'removeClass']('navbar-fixed-top');
+        cardFix();
     });
 
     /*------------------------------
@@ -196,6 +209,39 @@
     }
     testimonial2_carousel();
 
+    function cards_caresel() {
+        var owl = $(".card-carusel");
+        owl.owlCarousel({
+            loop: true,
+            margin: 40,
+            responsiveClass: true,
+            navigation: true,
+            navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
+            nav: true,
+            items: 1,
+            smartSpeed: 2000,
+            dots: true,
+            autoplay: false,
+            autoplayTimeout: 4000,
+            center: false,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                480: {
+                    items: 1
+                },
+                760: {
+                    items: 1
+                },
+                992: {
+                    items: 1
+                }
+            }
+        });
+    }
+    cards_caresel();
+
     function resizeHeightBuy() {
         if(!$('#buy').length) return;
         var heightMenu = $('header').height();
@@ -204,6 +250,7 @@
         target.height( heightWindow - heightMenu );
     }
     resizeHeightBuy();
+
 
 
 }(jQuery));
