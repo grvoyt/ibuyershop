@@ -55,11 +55,8 @@
     sticky
     -----------------*/
     $(window).on('scroll', function() {
-        if ($(window).scrollTop() > 85) {
-            $('header').addClass('navbar-fixed-top');
-        } else {
-            $('header').removeClass('navbar-fixed-top');
-        }
+        if($('#buy').length) return;
+        $('header')[($(window).scrollTop() > 85) ? 'addClass' : 'removeClass']('navbar-fixed-top');
     });
 
     /*------------------------------
@@ -198,6 +195,15 @@
         });
     }
     testimonial2_carousel();
+
+    function resizeHeightBuy() {
+        if(!$('#buy').length) return;
+        var heightMenu = $('header').height();
+        var heightWindow = $(window).height();
+        var target = $('.buy_map');
+        target.height( heightWindow - heightMenu );
+    }
+    resizeHeightBuy();
 
 
 }(jQuery));
