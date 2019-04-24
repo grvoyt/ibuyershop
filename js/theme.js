@@ -32,7 +32,7 @@
 
     });
 
-    menuShower();
+    if( $(window).width() < 992 ) menuShower();
 
     function cardFix(tag) {
         var block = $('.card_info_offer');
